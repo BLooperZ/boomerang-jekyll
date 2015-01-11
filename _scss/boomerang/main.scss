@@ -1,0 +1,85 @@
+
+
+/*!
+ * Application CSS
+ *
+ * Put your CSS code here.
+ */
+
+
+.padded {
+	padding: .75em;
+}
+
+@media screen and (min-width: 30em ) {
+
+	.panel {
+		margin: $panel-margin;
+	}
+	.padded {
+			padding: 1.25em;
+	}
+}
+
+@media screen and (min-width: 64em ) {
+
+  	.centered {
+		width: 95%;
+	}
+
+}
+
+@media screen and (min-width: 95em ) {
+
+	.panel {
+		margin: $panel-margin;
+	}
+	.padded {
+			padding: 1.25em;
+	}
+  	.centered {
+		width: 84em;
+	}
+    .layout.centered {
+		width: 84em - 4 * $panel-margin;
+	}
+
+}
+
+/*Helper Classess*/
+
+.centered {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.full {
+	width: 100%;
+	margin: 0;
+
+}
+
+
+.fixed {
+	position: fixed;
+	width: 100%;
+
+}
+
+
+footer.fixed {
+	position: fixed;
+	bottom: 0;
+
+}
+
+
+/*DEBUG*//*
+.layout > main, .layout > aside {border: 1px solid black; background: green;
+padding: 0;}
+.container {border: 1px solid black;}
+.full > div {border: 1px solid black;}
+header > div {border: 1px solid black;}
+.upperpage > header {background: #f80; border: 1px solid black;}
+.page > footer {background: #f80; border: 1px solid black;}
+*/

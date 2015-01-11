@@ -1,7 +1,7 @@
 ---
 layout: default
-title: אודות
-permalink: /about/
+title: צור קשר
+permalink: /contact/
 ---
 
 Some information about you!

@@ -1,0 +1,40 @@
+---
+layout: h5bp
+---
+<div class="page centered" role="document">
+  <header role="banner">
+    <div class="panel centered padded">
+      <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+      <div class="site-info">
+        <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
+        <p class="site-description">{{ site.description }}</p>
+      </div>
+      {% capture location %}{{ page.url | remove_first:'/' | split:'/' | first }}{% endcapture %}
+      <nav>
+        <ul>
+          <li><a {% if location == 'shows' %}class="active" {% endif %}href="{{ site.baseurl }}/shows/">תכניות</a></li>
+          <li><a {% if location == 'news' %}class="active" {% endif %}href="{{ site.baseurl }}/news/">חדשות</a></li>
+          <li><a {% if location == 'about' %}class="active" {% endif %}href="{{ site.baseurl }}/about/">אודות</a></li>
+          <li><a {% if location == 'contact' %}class="active" {% endif %}href="{{ site.baseurl }}/contact/">צור קשר</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="upperpage">
+    <div class="{% unless page.sidebar %}layout {% endunless %}centered">
+      <main class="panel" role="main">
+        <div class="padded">
+          {{content}}
+        </div>
+      </main>
+      <aside class="panel" role="banner">
+        {% include sidebar.html %}
+      </aside>
+    </div>
+  </div>
+  <footer role="contentinfo">
+    <div class="panel text-center">
+      {% include footer.html%}
+    </div>
+  </footer>
+</div>

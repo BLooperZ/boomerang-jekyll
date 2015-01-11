@@ -1,0 +1,20 @@
+---
+layout: default
+title: עמוד ראשי
+permalink: /
+---
+
+<div class="posts">
+  {% for show in site.shows %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ show.url }}">{{ show.title }}</a></h1>
+
+      <div class="entry">
+        {{ show.content | truncatewords:40}}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ show.url }}" class="read-more">Read More</a>
+    </article>
+  {% endfor %}
+</div>

@@ -1,0 +1,79 @@
+---
+layout: default
+title: תכניות
+permalink: /shows/
+# sidebar: disable
+---
+<style>
+
+/* ------------------------------------------------------------
+MEDIA
+------------------------------------------------------------- */
+  .media {
+  overflow: hidden; /* clear child floats */
+  display: inline-block;
+    /*style*/
+    border: 1px solid black;
+  }
+@media screen and (min-width: 30em) {
+  .media {
+    width: 45%;
+}
+}
+    @media screen and (min-width: 70em) {
+    .media {
+      width: 30%;
+    }
+}
+  @media screen and (min-width: 80em) {
+    .media {
+      width: 22%;
+    }
+}
+
+.media-hd > img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+  @media screen and (max-width: 29em) {
+.media-hd {
+  margin: 0;
+  float: right;
+  max-width: 45%;
+}
+    .media-hd > img {
+  height: 100%;
+}
+
+  }
+
+/*
+Creates a new block formatting context
+which prevents the inner content from
+wrapping the float
+*/
+.media-bd {
+  overflow: hidden;
+}
+
+</style>
+
+    {% for show in site.shows %}
+<div class="media panel">
+  <div class="media-hd">
+    <img src="http://placehold.it/250x350">
+  </div>
+  <div class="media-bd">
+    <h1><a href="{{ site.baseurl }}{{ show.url }}">{{ show.title }}</a></h1>
+    <p>{{ show.content | truncatewords:20}}</p>
+    <a href="{{ site.baseurl }}{{ show.url }}" class="read-more">Read More</a>
+  </div>
+</div>
+    {% endfor %}
+
+
+
+

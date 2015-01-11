@@ -1,0 +1,47 @@
+/*Sticky footer*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  /* remove default paddings on browsers */
+  padding: 0;
+}
+
+.page {
+  display: table;
+  width: 100%;
+  height: 100%;
+
+  > .upperpage {
+	 display: table-row;
+	 height: 100%;
+  }
+
+  > header {
+    border-top: 1px solid red;
+  }
+
+  > footer {
+    border-bottom: 1px solid red;
+  }
+}
+/*Grid*/
+@media screen and (min-width: 60em ) {
+  .layout {
+    padding-left: $sidebar-width + 4 * $panel-margin;
+    overflow: hidden;
+
+    > main {
+      float: right;
+      width:100%;
+    }
+
+    > aside {
+      float: left;
+      width: $sidebar-width;
+      margin-left: -$sidebar-width - 3 * $panel-margin;
+    }
+  }
+}
