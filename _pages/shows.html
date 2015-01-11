@@ -20,7 +20,6 @@ MEDIA
     width: 45%;
   }
   .media-hd {
-    float: right;
 }
 }
     @media screen and (min-width: 70em) {
@@ -66,12 +65,11 @@ wrapping the float
 
     {% for show in site.shows %}
 <div class="media panel">
-  <h1><a href="{{ site.baseurl }}{{ show.url }}">{{ show.title }}</a></h1>
   <div class="media-hd">
     <img src="http://placehold.it/250x350">
   </div>
   <div class="media-bd">
-
+  <h1><a href="{{ site.baseurl }}{{ show.url }}">{{ show.title }}</a></h1>
     <p>{{ show.content | truncatewords:20}}</p>
     <a href="{{ site.baseurl }}{{ show.url }}" class="read-more">Read More</a>
   </div>
