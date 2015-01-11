@@ -18,6 +18,9 @@ MEDIA
 @media screen and (min-width: 30em) {
   .media {
     width: 45%;
+  }
+  .media-hd {
+    float: right;
 }
 }
     @media screen and (min-width: 70em) {
@@ -47,9 +50,6 @@ MEDIA
     .media-hd > img {
   height: 100%;
 }
-    .media h1 {
-     float: right;
-    }
 
   }
 
@@ -66,10 +66,10 @@ wrapping the float
 
     {% for show in site.shows %}
 <div class="media panel">
+  <h1><a href="{{ site.baseurl }}{{ show.url }}">{{ show.title }}</a></h1>
   <div class="media-hd">
     <img src="http://placehold.it/250x350">
   </div>
-  <h1><a href="{{ site.baseurl }}{{ show.url }}">{{ show.title }}</a></h1>
   <div class="media-bd">
 
     <p>{{ show.content | truncatewords:20}}</p>
