@@ -99,3 +99,7 @@ collections:
   shows:
     output: true
     permalink: /shows/:path/
+
+example: var
+
+var: %{example}
