@@ -102,4 +102,4 @@ collections:
 
 example: var
 
-var: %{example}
+var: try
