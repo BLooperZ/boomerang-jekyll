@@ -99,5 +99,3 @@ collections:
   shows:
     output: true
     permalink: /shows/:path/
-
-var: try
